@@ -1,0 +1,12 @@
+2020.10.17 21:43:31 INFO  started: Metals version 0.9.4 in workspace '/home/eslam/tut/docker/frontend' for client vscode.
+2020.10.17 21:43:32 INFO  time: initialize in 1.17s
+2020.10.17 21:43:34 WARN  no build tool detected in workspace '/home/eslam/tut/docker/frontend'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. 
+Oct 17, 2020 9:49:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Oct 17, 2020 9:49:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Oct 17, 2020 9:50:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+Oct 17, 2020 9:50:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTraceNotification
+2020.10.18 02:47:39 INFO  shutting down Metals
