@@ -2,15 +2,19 @@ sudo: required
 services:
   - docker
 before_install:
-  # - docker build -t eslamfakhry/docker-react -f Dockerfile.dev .
-  # - curl https://cli-assets.heroku.com/install.sh | sh
-  - echo "ds"
-  - echo done > .mafesh
-  - cat .mafesh
+  - docker build -t eslamfakhry/docker-react:dev -f Dockerfile.dev .
+  - curl https://cli-assets.heroku.com/install.sh | sh
 
 script:
-  - echo "ds2"
-  # - docker run -e "CI=true"  eslamfakhry/docker-react yarn test
+  - docker run -e "CI=true"  eslamfakhry/docker-react:dev yarn test
+  # - docker build -t eslamfakhry/docker-react .
+deploy:   
+  provider: script
+  script: 
+   /usr/local/heroku/bin/heroku container:push web --app eslam-docker-react12345
+   /usr/local/heroku/bin/heroku container:release web --app eslam-docker-react12345
+  on:
+    branch: master
 # deploy:
 #   provider: heroku
 #   api_key:
