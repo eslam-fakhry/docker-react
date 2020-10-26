@@ -3,10 +3,15 @@ services:
   - docker
 before_install:
   - docker build -t eslamfakhry/docker-react -f Dockerfile.dev .
-script:
-  - docker run -e "CI=true"  eslamfakhry/docker-react yarn test
-deploy:
-  provider: heroku
-  api_key:
-    secure: g4O5nOL+xNmaolp4NeMWTD1UhXNLONogNUn7CPkis1K91TKCpuz8sSpfpxw7kl1pEFIHacJnmPdYN0iop/z5l3E0XV4jFwt6FnkeuYIfV8W8dIk01E/BPFo3MB9adD5bjT/vHTV9QdHilBRLOGo5Xt1uLbK462AgbwqSK7gPe/BUdvZ5RvB45digDYZuBvTjjPvpI017fPPt0QkVwrubhVl3Io1Gnj5nsF2xbYYIhviva/6UMRDh7GNw9Wwy36iHKWgkHdGYDOEZjxgX0TtFPL8Yiuk2K8IEODGN95CNuClS4uoBqh4q3nAel6poEqjfb+ObadWg6GyPqotxUIyPElTdCcCHRh+RJS+vdZ6Gi6vyTapDGfSrhF94NSKZ0I24KSYlK4kMYl8eO7R9T5VmWiRcTIcIdccvKIGUtc9M0qzWaI2PT9ggEb078VlA3e3MckBAzjLL/AUqYiFtEdtM8RkNV9CmvHsg41p1209eYXN9PMEbcUSi/5zbJkT8N1CbQdN4PEYFE+nrHKFdDlp0rB3xGDx5jSudD8Lfub3aGDZpDa8nIzLUb81eh7eVUPhtmmzEDWN7Q2sGraiJEij2TQl8iuOb8AzVL0uShG6gaH40Y4nIC1WAMkyWsU4hs1AYu4YqCsW6qf4qBvG5tI2InD8b7UQ6GXzspY9ESmjIU9k=
-  app: eslam-docker-react12345  
+  - curl https://cli-assets.heroku.com/install.sh | sh
+  - echo done > .mafesh
+  - cat .mafesh
+
+# script:
+#   - docker run -e "CI=true"  eslamfakhry/docker-react yarn test
+# deploy:
+#   provider: heroku
+#   api_key:
+#     secure: g4O5nOL+xNmaolp4NeMWTD1UhXNLONogNUn7CPkis1K91TKCpuz8sSpfpxw7kl1pEFIHacJnmPdYN0iop/z5l3E0XV4jFwt6FnkeuYIfV8W8dIk01E/BPFo3MB9adD5bjT/vHTV9QdHilBRLOGo5Xt1uLbK462AgbwqSK7gPe/BUdvZ5RvB45digDYZuBvTjjPvpI017fPPt0QkVwrubhVl3Io1Gnj5nsF2xbYYIhviva/6UMRDh7GNw9Wwy36iHKWgkHdGYDOEZjxgX0TtFPL8Yiuk2K8IEODGN95CNuClS4uoBqh4q3nAel6poEqjfb+ObadWg6GyPqotxUIyPElTdCcCHRh+RJS+vdZ6Gi6vyTapDGfSrhF94NSKZ0I24KSYlK4kMYl8eO7R9T5VmWiRcTIcIdccvKIGUtc9M0qzWaI2PT9ggEb078VlA3e3MckBAzjLL/AUqYiFtEdtM8RkNV9CmvHsg41p1209eYXN9PMEbcUSi/5zbJkT8N1CbQdN4PEYFE+nrHKFdDlp0rB3xGDx5jSudD8Lfub3aGDZpDa8nIzLUb81eh7eVUPhtmmzEDWN7Q2sGraiJEij2TQl8iuOb8AzVL0uShG6gaH40Y4nIC1WAMkyWsU4hs1AYu4YqCsW6qf4qBvG5tI2InD8b7UQ6GXzspY9ESmjIU9k=
+#   app: eslam-docker-react12345  k
+  
