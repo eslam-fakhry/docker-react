@@ -7,6 +7,7 @@ before_install:
 
 script:
   - docker run -e "CI=true"  eslamfakhry/docker-react:dev yarn test
+  - /usr/local/heroku/bin/heroku auth:whoami
   # - docker build -t eslamfakhry/docker-react .
 deploy:   
   provider: script
